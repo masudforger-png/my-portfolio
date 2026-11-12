@@ -1,162 +1,101 @@
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
 
-  // 1. MOBILE NAVIGATION
+  // Mobile navigation
   const menuToggle = document.getElementById("menuToggle");
   const nav = document.getElementById("nav");
 
-  if (menuToggle && nav) {
-    menuToggle.addEventListener("click", () => {
-      const isOpen = nav.classList.toggle("active");
-
-      menuToggle.setAttribute("aria-expanded", isOpen);
-      menuToggle.textContent = isOpen ? "✕" : "☰";
-    });
-
-    nav.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        nav.classList.remove("active");
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.textContent = "☰";
-      });
-    });
-
-    document.addEventListener("keydown", event => {
-      if (event.key === "Escape") {
-        nav.classList.remove("active");
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.textContent = "☰";
-      }
-    });
-  }
-
-
-  // 2. TYPING ANIMATION
-  const typingText = document.getElementById("typingText");
-
-  if (typingText) {
-    const words = [
-      "Software Engineer",
-      "Web Developer",
-      "WordPress Developer",
-      "Creative Designer"
-    ];
-
-    let wordIndex = 0;
-    let charIndex = 0;
-    let deleting = false;
-
-    function typeEffect() {
-      const currentWord = words[wordIndex];
-
-      if (deleting) {
-        charIndex--;
-      } else {
-        charIndex++;
-      }
-
-      typingText.textContent = currentWord.substring(0, charIndex);
-
-      let delay = deleting ? 45 : 90;
-
-      if (!deleting && charIndex === currentWord.length) {
-        deleting = true;
-        delay = 1400;
-      } else if (deleting && charIndex === 0) {
-        deleting = false;
-        wordIndex = (wordIndex + 1) % words.length;
-        delay = 400;
-      }
-
-      setTimeout(typeEffect, delay);
-    }
-
-    typeEffect();
-  }
-
-
-  // 3. SCROLL REVEAL
-  const revealElements = document.querySelectorAll(
-    ".content-section, .neon-card, .hero-content, .hero-visual"
-  );
-
-  revealElements.forEach(element => {
-    element.classList.add("reveal");
+  menuToggle.addEventListener("click", function () {
+    nav.classList.toggle("active");
+    menuToggle.textContent = nav.classList.contains("active") ? "✕" : "☰";
   });
 
-  if ("IntersectionObserver" in window) {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.12
+  document.querySelectorAll(".nav a").forEach(function (link) {
+    link.addEventListener("click", function () {
+      nav.classList.remove("active");
+      menuToggle.textContent = "☰";
     });
+  });
 
-    revealElements.forEach(element => {
-      observer.observe(element);
-    });
-  } else {
-    revealElements.forEach(element => {
-      element.classList.add("visible");
-    });
+  // Typing animation
+  const typingText = document.getElementById("typingText");
+  const words = [
+    "Software Engineer",
+    "Web Developer",
+    "WordPress Developer",
+    "Creative Designer"
+  ];
+
+  let wordIndex = 0;
+  let charIndex = 0;
+  let deleting = false;
+
+  function typeEffect() {
+    const currentWord = words[wordIndex];
+
+    typingText.textContent = deleting
+      ? currentWord.substring(0, charIndex--)
+      : currentWord.substring(0, charIndex++);
+
+    let delay = deleting ? 45 : 90;
+
+    if (!deleting && charIndex > currentWord.length) {
+      deleting = true;
+      delay = 1200;
+    } else if (deleting && charIndex < 0) {
+      deleting = false;
+      wordIndex = (wordIndex + 1) % words.length;
+      charIndex = 0;
+      delay = 400;
+    }
+
+    setTimeout(typeEffect, delay);
   }
 
+  typeEffect();
 
-  // 4. PROFILE IMAGE FALLBACK
+  // Profile image fallback
   const profileImage = document.getElementById("profileImage");
+  const imageFallback = document.getElementById("imageFallback");
 
-  if (profileImage) {
-    profileImage.addEventListener("error", () => {
-      profileImage.style.display = "none";
-      console.error("Profile image not found. Check assets/profile.png");
-    });
+  profileImage.addEventListener("error", function () {
+    profileImage.style.display = "none";
+    imageFallback.style.display = "grid";
+  });
+
+  if (profileImage.complete && profileImage.naturalWidth === 0) {
+    profileImage.style.display = "none";
+    imageFallback.style.display = "grid";
   }
 
+  // Footer year
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
 
-  // 5. COMPANY LOGO FALLBACK
-  const companyLogo = document.querySelector(".company-logo");
+  // WhatsApp contact form
+  document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault();
 
-  if (companyLogo) {
-    companyLogo.addEventListener("error", () => {
-      companyLogo.style.display = "none";
-    });
-  }
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
 
+    // Replace with your real WhatsApp number
+    const phone = "8801XXXXXXXXX";
 
-  // 6. WHATSAPP CONTACT FORM
-  const contactForm = document.getElementById("contactForm");
+    if (phone.includes("X")) {
+      alert("Please add your WhatsApp number in script.js first.");
+      return;
+    }
 
-  if (contactForm) {
-    contactForm.addEventListener("submit", event => {
-      event.preventDefault();
+    const text = "Hello Masud!\n\nName: " + name +
+      "\nEmail: " + email +
+      "\nMessage: " + message;
 
-      const name = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const message = document.getElementById("message").value.trim();
+    const url = "https://wa.me/" + phone +
+      "?text=" + encodeURIComponent(text);
 
-      if (!name || !email || !message) {
-        alert("Please fill in all fields.");
-        return;
-      }
-
-      // Replace with your own WhatsApp number
-      const phone = "8801XXXXXXXXX";
-
-      const whatsappMessage =
-        `Hello, I am ${name}.\n` +
-        `Email: ${email}\n\n` +
-        `Message:\n${message}`;
-
-      const whatsappURL =
-        "https://wa.me/" + phone +
-        "?text=" + encodeURIComponent(whatsappMessage);
-
-      window.open(whatsappURL, "_blank");
-    });
-  }
+    window.open(url, "_blank");
+  });
 
 });
