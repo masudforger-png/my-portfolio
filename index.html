@@ -1,607 +1,421 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b1020">
 
-    <title>MASUD  — Aİ FULL STACK ENGİNEER</title>
+    <title>Masud Forger | Software Engineer</title>
+
+    <meta name="description"
+          content="Masud Forger — Software Engineer and Web Developer. Building modern digital experiences.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <body>
+<header class="header">
+    <a href="#home" class="logo">MF<span>.</span></a>
 
-<div class="scroll-progress">
-    <span id="scrollProgress"></span>
-</div>
+    <button class="menu-toggle" id="menuToggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false">
+        <span></span>
+        <span></span>
+    </button>
 
-
-
-<!-- ================= HERO ================= -->
-
-<section class="hero" id="home">
-
-    <header class="header">
-
-        <a href="#home" class="logo">
-            Aİ <span>.</span>
-        </a>
-
-        <button class="menu-btn" id="menuBtn">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-
-    </header>
+    <nav class="nav" id="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact" class="nav-contact">Let's Talk ↗</a>
+    </nav>
+</header>
 
 
-    <div class="hero-container">
+<main>
 
-        <div class="hero-text">
+    <!-- HERO -->
+    <section class="hero" id="home">
 
-            <div class="small-title">
-                CREATIVE DIGITAL DESIGNER
+        <div class="hero-content">
+
+            <div class="availability">
+                <span class="status-dot"></span>
+                SOFTWARE ENGINEER & WEB DEVELOPER
             </div>
 
             <h1>
-                HELLO<br>
-                I'M <span>MASUD FORGER </span>
+                Turning ideas<br>
+                into <span>digital</span><br>
+                experiences.
             </h1>
 
-            <div class="typing-box">
-                <span>></span>
-                <span id="typingText"></span>
-                <b>|</b>
-            </div>
-
-            <p>
-                I create modern digital experiences where
-                clean design, creative motion and meaningful
-                interaction come together.
+            <p class="hero-description">
+                Hi, I'm Masud Forger. I build modern websites
+                and digital products through development,
+                creative thinking and technology.
             </p>
 
-            <a href="#contact" class="main-btn">
-                LET'S TALK
-                <span>↗</span>
-            </a>
+            <div class="hero-actions">
+                <a href="#projects" class="primary-btn">
+                    Explore My Work ↗
+                </a>
 
-            <div class="socials">
-                <a href="#">IG</a>
-                <a href="#">BE</a>
-                <a href="#">DR</a>
-                <a href="#">GH</a>
+                <a href="#about" class="text-btn">
+                    More About Me ↓
+                </a>
+            </div>
+
+            <div class="hero-meta">
+                <span>BASED IN BANGLADESH</span>
+                <span>AVAILABLE FOR OPPORTUNITIES</span>
             </div>
 
         </div>
 
+        <div class="hero-visual">
+            <div class="profile-orbit"></div>
 
-        <div class="hero-image-area">
+            <div class="profile-card">
+                <img src="assets/profile.png"
+                     alt="Masud Forger">
 
-            <div class="image-glow"></div>
-
-            <div class="image-frame">
-
-                <span class="image-number">01</span>
-
-                <img src="https://masudforger-png.github.io/my-portfolio/profile.png" alt="Profile" id="profileImage">
-
-                <div class="image-label">
-                    DESIGN • CREATE • EXPERIENCE
+                <div class="profile-caption">
+                    <span>MF / 001</span>
+                    <span>DEVELOPER</span>
                 </div>
-
             </div>
 
+            <div class="floating-tag tag-one">
+                <span>✦</span> Creative Thinking
+            </div>
+
+            <div class="floating-tag tag-two">
+                <span>↗</span> Clean Development
+            </div>
         </div>
 
-    </div>
-
-</section>
-
-
-<!-- ================= ABOUT ================= -->
-
-<section class="section" id="about">
-
-    <div class="section-heading">
-        <span>01</span>
-        <h2>ABOUT ME</h2>
-    </div>
-
-    <div class="about-container">
-
-        <div class="about-text">
-
-    <small>A LITTLE ABOUT ME</small>
-
-    <h3>
-        I build <span>digital</span>
-        experiences.
-    </h3>
-
-    <p>
-        I’m a Full-Stack Developer and Creative Web Designer passionate about building modern digital experiences. I combine development, design, and AI-powered tools to transform ideas into responsive, functional, and engaging digital products.
-    </p>
-
-    <p>
-        From crafting intuitive user interfaces to developing complete web solutions, I enjoy solving problems and creating experiences that are both visually engaging and easy to use. I’m continuously learning new technologies and exploring better ways to build, design, and innovate.
-    </p>
-
-    <div class="about-info">
-
-        <div>
-            <small>ROLE</small>
-            <strong>FULL-STACK DEVELOPER</strong>
+        <div class="hero-bottom">
+            <span>SCROLL TO EXPLORE</span>
+            <span>01 — 06</span>
         </div>
 
-        <div>
-            <small>FOCUS</small>
-            <strong>WEB • AI • DESIGN</strong>
-        </div>
-
-    </div>
-
-        </div>
-
-</section>
+    </section>
 
 
-<!-- ================= EXPERIENCE ================= -->
+    <!-- ABOUT -->
+    <section class="section about" id="about">
 
-<section class="section experience-section" id="experience">
-
-    <div class="section-heading">
-        <span>02</span>
-        <h2>EXPERIENCE</h2>
-    </div>
-
-    <p class="experience-intro">
-        My professional journey in software engineering
-        and web development, learning and building
-        real-world digital solutions.
-    </p>
-
-    <div class="experience-card">
-
-        <div class="experience-marker">
-            <span></span>
-        </div>
-
-        <div class="experience-content">
-
-            <div class="experience-top">
-                <span class="experience-status">
-                    CURRENTLY WORKING
-                </span>
-
-                <span class="experience-number">01</span>
-            </div>
-
-            <h3>Software Engineer</h3>
-
-            <h4>&amp; Web Developer</h4>
-
-            
-<a
-    href="https://itcareersolution.com/"
-    class="experience-company"
-    target="_blank"
-    rel="noopener noreferrer"
->
-    it career solution ↗
-</a>
-
-
-            <div class="experience-meta">
-                <span>JOB + INTERNSHIP</span>
-                <span>october 2026  – PRESENT</span>
-            </div>
-
-            <p>
-                Working on software development and modern
-                web applications, building responsive user
-                interfaces and developing practical digital
-                solutions.
-            </p>
-
-            <div class="experience-tags">
-                <span>SOFTWARE DEVELOPMENT</span>
-                <span>WEB DEVELOPMENT</span>
-                <span>UI / UX</span>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-    
-  <!-- ================= SKILLS ================= -->
-
-<section class="section skills-section" id="skills">
-
-    <div class="section-heading">
-        <span>02</span>
-        <h2>MY SKILLS</h2>
-    </div>
-
-    <p class="skills-intro">
-        Technologies and tools I use to build modern,
-        responsive and intelligent digital experiences.
-    </p>
-
-    <div class="skills-grid">
-
-        <div class="skill-card">
-            <div class="skill-top">
-                <span>01</span>
-                <strong>HTML</strong>
-            </div>
-            <p>Semantic structure & modern web layouts.</p>
-            <div class="skill-bar">
-                <span style="width: 90%;"></span>
-            </div>
-            <small>90%</small>
-        </div>
-
-        <div class="skill-card">
-            <div class="skill-top">
-                <span>02</span>
-                <strong>CSS</strong>
-            </div>
-            <p>Responsive design, animation & UI styling.</p>
-            <div class="skill-bar">
-                <span style="width: 88%;"></span>
-            </div>
-            <small>88%</small>
-        </div>
-
-        <div class="skill-card">
-            <div class="skill-top">
-                <span>03</span>
-                <strong>JavaScript</strong>
-            </div>
-            <p>Interactive interfaces and dynamic web apps.</p>
-            <div class="skill-bar">
-                <span style="width: 82%;"></span>
-            </div>
-            <small>82%</small>
-        </div>
-
-        <div class="skill-card">
-            <div class="skill-top">
-                <span>04</span>
-                <strong>Python</strong>
-            </div>
-            <p>Programming, automation and AI workflows.</p>
-            <div class="skill-bar">
-                <span style="width: 78%;"></span>
-            </div>
-            <small>78%</small>
-        </div>
-
-        <div class="skill-card">
-            <div class="skill-top">
-                <span>05</span>
-                <strong>AI Tools</strong>
-            </div>
-            <p>AI-assisted development and creative workflows.</p>
-            <div class="skill-bar">
-                <span style="width: 85%;"></span>
-            </div>
-            <small>85%</small>
-        </div>
-
-        <div class="skill-card">
-            <div class="skill-top">
-                <span>06</span>
-                <strong>Git / GitHub</strong>
-            </div>
-            <p>Version control and project collaboration.</p>
-            <div class="skill-bar">
-                <span style="width: 75%;"></span>
-            </div>
-            <small>75%</small>
-        </div>
-
-    </div>
-
-<!-- TECH STACK -->
-
-<div class="tech-strip">
-
-    <span>HTML</span>
-    <i>•</i>
-
-    <span>CSS</span>
-    <i>•</i>
-
-    <span>JAVASCRIPT</span>
-    <i>•</i>
-
-    <span>PYTHON</span>
-    <i>•</i>
-
-    <span>AI</span>
-    <i>•</i>
-
-    <span>GIT</span>
-    <i>•</i>
-
-    <span>GITHUB</span>
-
-</div>
-
-  
-</section>
-
-
-<!-- ================= WORK ================= -->
-
-<section class="section" id="portfolio">
-
-    <div class="section-heading">
-        <span>02</span>
-        <h2>SELECTED WORK</h2>
-    </div>
-
-    <div class="work-grid">
-
-        <article class="work-card">
+        <div class="section-label">
             <span>01</span>
-            <small>WEB EXPERIENCE</small>
-            <h3>Digital Interface</h3>
-            <p>
-                Modern interface concept with immersive
-                interaction.
-            </p>
-            <b>↗</b>
-        </article>
+            ABOUT ME
+        </div>
 
-        <article class="work-card">
+        <div class="about-layout">
+
+            <h2>
+                Building with<br>
+                purpose. Creating<br>
+                with <span>passion.</span>
+            </h2>
+
+            <div class="about-content">
+                <p>
+                    I'm a Software Engineer and Web Developer
+                    passionate about creating modern, responsive
+                    and meaningful digital experiences.
+                </p>
+
+                <p>
+                    I combine development, thoughtful design
+                    and AI-powered tools to transform ideas into
+                    functional digital products. I enjoy solving
+                    problems, learning new technologies and
+                    continuously improving my craft.
+                </p>
+
+                <a href="#contact" class="inline-link">
+                    Let's work together ↗
+                </a>
+            </div>
+
+        </div>
+
+        <div class="tech-strip">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JAVASCRIPT</span>
+            <span>PYTHON</span>
+            <span>AI TOOLS</span>
+            <span>GIT & GITHUB</span>
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+
+        <div class="section-label">
             <span>02</span>
-            <small>UI / UX</small>
-            <h3>Creative Dashboard</h3>
-            <p>
-                A clean interface designed around usability.
-            </p>
-            <b>↗</b>
-        </article>
+            MY EXPERTISE
+        </div>
 
-        <article class="work-card">
+        <div class="section-title-row">
+            <h2>Skills & <span>Tools</span></h2>
+            <p>
+                Technologies and tools I use to create
+                useful digital experiences.
+            </p>
+        </div>
+
+        <div class="skills-grid">
+
+            <article class="skill-card">
+                <span>01 / FRONTEND</span>
+                <h3>HTML & CSS</h3>
+                <p>Modern layouts, responsive design and styling.</p>
+            </article>
+
+            <article class="skill-card">
+                <span>02 / INTERACTION</span>
+                <h3>JavaScript</h3>
+                <p>Interactive interfaces and dynamic experiences.</p>
+            </article>
+
+            <article class="skill-card">
+                <span>03 / PROGRAMMING</span>
+                <h3>Python</h3>
+                <p>Programming logic and automation workflows.</p>
+            </article>
+
+            <article class="skill-card">
+                <span>04 / WORKFLOW</span>
+                <h3>Git & GitHub</h3>
+                <p>Version control and project deployment.</p>
+            </article>
+
+            <article class="skill-card">
+                <span>05 / DESIGN</span>
+                <h3>UI / UX</h3>
+                <p>Clean, intuitive and user-focused interfaces.</p>
+            </article>
+
+            <article class="skill-card">
+                <span>06 / TECHNOLOGY</span>
+                <h3>AI Tools</h3>
+                <p>AI-assisted development and creative workflows.</p>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- EXPERIENCE -->
+    <section class="section experience" id="experience">
+
+        <div class="section-label">
             <span>03</span>
-            <small>BRANDING</small>
-            <h3>Visual Identity</h3>
-            <p>
-                A visual system combining simplicity
-                and personality.
-            </p>
-            <b>↗</b>
-        </article>
-
-    </div>
-
-</section>
-
-
-<!-- ================= SERVICES ================= -->
-
-<section class="section" id="services">
-
-    <div class="section-heading">
-        <span>03</span>
-        <h2>SERVICES</h2>
-    </div>
-
-    <p class="services-intro">
-        Different problems require different creative
-        solutions. These are the areas where I build
-        digital experiences.
-    </p>
-
-    <div class="work-grid">
-
-    <article class="work-card">
-
-        <div class="work-image">
-    <div class="project-preview">
-        <span>&lt;/&gt;</span>
-        <strong>PROJECT 01</strong>
-    </div>
+            EXPERIENCE
         </div>
 
-      <div class="project-status">
-    LIVE
-      </div>
+        <div class="experience-card">
+            <div>
+                <span class="experience-status">CURRENT ROLE</span>
+                <h2>Software Engineer &<br>Web Developer</h2>
+                <p>Professional Experience</p>
+            </div>
 
-        <span>01</span>
-        <small>WEB EXPERIENCE</small>
-
-        <h3>Digital Interface</h3>
-
-        <p>
-            Modern interface concept with immersive
-            interaction and clean visual design.
-        </p>
-
-        <a href="#" class="project-btn">
-            VIEW PROJECT ↗
-        </a>
-
-    </article>
-
-
-    <article class="work-card">
-
-        <div class="work-image">
-    <div class="project-preview">
-        <span>UI</span>
-        <strong>PROJECT 02</strong>
-    </div>
+            <div class="experience-details">
+                <span>START DATE — PRESENT</span>
+                <p>
+                    Currently working in software engineering
+                    and web development, building practical
+                    skills and contributing to digital projects.
+                </p>
+                <small>Company name and dates can be added later.</small>
+            </div>
         </div>
 
-      <div class="project-status">
-    UI / UX
-      </div>
-
-        <span>02</span>
-        <small>UI / UX</small>
-
-        <h3>Creative Dashboard</h3>
-
-        <p>
-            A clean dashboard designed around
-            usability and modern interaction.
-        </p>
-
-        <a href="#" class="project-btn">
-            VIEW PROJECT ↗
-        </a>
-
-    </article>
+    </section>
 
 
-    <article class="work-card">
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
 
-        <div class="work-image">
-    <div class="project-preview">
-        <span>✦</span>
-        <strong>PROJECT 03</strong>
-    </div>
+        <div class="section-label">
+            <span>04</span>
+            SELECTED WORK
         </div>
 
-      <div class="project-status">
-    CONCEPT
-      </div>
+        <div class="section-title-row">
+            <h2>Featured <span>Projects</span></h2>
+            <p>A selection of my creative and development work.</p>
+        </div>
 
-        <span>03</span>
-        <small>BRANDING</small>
+        <div class="projects-grid">
 
-        <h3>Visual Identity</h3>
+            <article class="project-card">
+                <div class="project-art art-one">
+                    <span>01</span>
+                    <strong>&lt;/&gt;</strong>
+                    <small>WEB DEVELOPMENT</small>
+                </div>
+                <div class="project-info">
+                    <div>
+                        <span>WEB EXPERIENCE</span>
+                        <h3>Digital Interface</h3>
+                    </div>
+                    <a href="#" aria-label="View Digital Interface">↗</a>
+                </div>
+            </article>
 
-        <p>
-            A visual identity combining simplicity,
-            creativity and personality.
-        </p>
+            <article class="project-card">
+                <div class="project-art art-two">
+                    <span>02</span>
+                    <strong>UI.</strong>
+                    <small>USER EXPERIENCE</small>
+                </div>
+                <div class="project-info">
+                    <div>
+                        <span>UI / UX DESIGN</span>
+                        <h3>Creative Dashboard</h3>
+                    </div>
+                    <a href="#" aria-label="View Creative Dashboard">↗</a>
+                </div>
+            </article>
 
-        <a href="#" class="project-btn">
-            VIEW PROJECT ↗
-        </a>
-
-    </article>
-
-    </div>
-
-</section>
-
-
-<!-- ================= CONTACT ================= -->
-
-<section class="section contact" id="contact">
-
-    <div class="section-heading">
-        <span>04</span>
-        <h2>LET'S TALK</h2>
-    </div>
-
-    <div class="contact-container">
-
-        <div>
-
-            <small>HAVE A PROJECT IN MIND?</small>
-
-            <h3>
-                Let's create something
-                <span>different.</span>
-            </h3>
+            <article class="project-card">
+                <div class="project-art art-three">
+                    <span>03</span>
+                    <strong>✳</strong>
+                    <small>CREATIVE CONCEPT</small>
+                </div>
+                <div class="project-info">
+                    <div>
+                        <span>VISUAL DESIGN</span>
+                        <h3>Visual Identity</h3>
+                    </div>
+                    <a href="#" aria-label="View Visual Identity">↗</a>
+                </div>
+            </article>
 
         </div>
 
-
-        <form id="contactForm">
-
-            <input
-                type="text"
-                placeholder="YOUR NAME"
-                required
-            >
-
-            <input
-                type="email"
-                placeholder="YOUR EMAIL"
-                required
-            >
-
-            <textarea
-                placeholder="TELL ME ABOUT YOUR PROJECT"
-                required
-            ></textarea>
-
-            <button type="submit">
-                SEND MESSAGE ↗
-            </button>
-
-        </form>
-
-    </div>
-
-</section>
+    </section>
 
 
-<!-- ================= FOOTER ================= -->
+    <!-- SERVICES -->
+    <section class="section" id="services">
 
-<footer>
+        <div class="section-label">
+            <span>05</span>
+            WHAT I DO
+        </div>
 
-    <span>© 2026 VERRONIC</span>
+        <h2 class="services-heading">
+            Turning ideas into<br>
+            <span>real solutions.</span>
+        </h2>
 
-    <span>
-        DESIGN • CREATE • EXPERIENCE
-    </span>
+        <div class="services-list">
 
+            <article>
+                <span>01</span>
+                <h3>Web Development</h3>
+                <p>Responsive and functional websites.</p>
+                <span>↗</span>
+            </article>
+
+            <article>
+                <span>02</span>
+                <h3>UI / UX Design</h3>
+                <p>Thoughtful and intuitive user experiences.</p>
+                <span>↗</span>
+            </article>
+
+            <article>
+                <span>03</span>
+                <h3>Creative Design</h3>
+                <p>Modern visual concepts and digital identity.</p>
+                <span>↗</span>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+
+        <div class="section-label">
+            <span>06</span>
+            GET IN TOUCH
+        </div>
+
+        <div class="contact-layout">
+
+            <div>
+                <h2>
+                    Have an idea?<br>
+                    Let's make it <span>real.</span>
+                </h2>
+
+                <p>
+                    Have a project or an opportunity in mind?
+                    I'd love to hear from you.
+                </p>
+            </div>
+
+            <form id="contactForm">
+
+                <label for="name">YOUR NAME</label>
+                <input type="text" id="name"
+                       placeholder="Enter your name" required>
+
+                <label for="email">EMAIL ADDRESS</label>
+                <input type="email" id="email"
+                       placeholder="Enter your email" required>
+
+                <label for="message">YOUR MESSAGE</label>
+                <textarea id="message"
+                          placeholder="Tell me about your idea..."
+                          required></textarea>
+
+                <button type="submit">
+                    Send Message ↗
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="footer">
+    <a href="#home" class="logo">MF<span>.</span></a>
+    <p>DESIGNED & BUILT BY MASUD FORGER</p>
+    <a href="#home">BACK TO TOP ↑</a>
 </footer>
-
-
-<!-- ================= MENU ================= -->
-
-<div class="menu" id="menu">
-
-    <nav>
-
-        <a href="#home">
-            <span>01</span> HOME
-        </a>
-
-        <a href="#about">
-            <span>02</span> ABOUT
-
-         <a href="#skills">
-    <span>03</span> SKILLS
-         </a>
-          
-        </a>
-
-        <a href="#portfolio">
-            <span>03</span> WORK
-        </a>
-
-        <a href="#services">
-            <span>04</span> SERVICES
-        </a>
-
-        <a href="#contact">
-            <span>05</span> CONTACT
-        </a>
-
-    </nav>
-
-</div>
-
 
 <script src="script.js"></script>
 
 </body>
-</html>
-
+                    </html>
+                    
