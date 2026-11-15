@@ -99,3 +99,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+
+// ===== PAGE LOADER =====
+document.body.classList.add('is-loading');
+
+window.addEventListener('load', () => {
+  const loader = document.getElementById('loader');
+  setTimeout(() => {
+    loader.classList.add('hide');
+    document.body.classList.remove('is-loading');
+  }, 1800);
+});
