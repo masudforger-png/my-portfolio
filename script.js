@@ -111,3 +111,20 @@ window.addEventListener('load', () => {
     document.body.classList.remove('is-loading');
   }, 1800);
 });
+
+// ===== SOCIAL LINKS =====
+const socialConfig = {
+  Facebook: "",   // https://facebook.com/yourpage
+  Discord:  "",   // 
+  WhatsApp: "",   // https://wa.me/8801XXXXXXXXX
+  YouTube:  ""    // https://youtube.com/@yourchannel
+};
+
+document.querySelectorAll('.social-icon').forEach(icon => {
+  const url = (socialConfig[icon.getAttribute('aria-label')] || '').trim();
+  if (url) {
+    icon.href = url;
+  } else {
+    icon.classList.add('hidden');
+  }
+});
