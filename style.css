@@ -643,30 +643,25 @@ body.is-loading {
   overflow: hidden;
 }
 
-/* ===== EXTRA FLOATING TAGS ===== */
-.tag-three {
-  top: 62%;
-  left: -8%;
+/* ===== EXTRA FLOATING TAGS (FIXED) ===== */
+.floating-tag.tag-three {
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: 22%;
+  left: 0;
+  transform: none;
+  z-index: 10;
   animation: floatTagA 4s ease-in-out infinite;
 }
 
-.tag-four {
-  bottom: 8%;
-  right: -6%;
+.floating-tag.tag-four {
+  position: absolute;
+  top: 18%;
+  bottom: auto;
+  left: auto;
+  right: 0;
+  transform: none;
+  z-index: 10;
   animation: floatTagB 4.5s ease-in-out infinite;
-}
-
-@keyframes floatTagA {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
-}
-
-@keyframes floatTagB {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(12px); }
-}
-
-@media (max-width: 600px) {
-  .tag-three { left: -2%; }
-  .tag-four { right: -2%; }
 }
