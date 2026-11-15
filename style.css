@@ -642,3 +642,31 @@ a {
 body.is-loading {
   overflow: hidden;
 }
+
+/* ===== EXTRA FLOATING TAGS ===== */
+.tag-three {
+  top: 62%;
+  left: -8%;
+  animation: floatTagA 4s ease-in-out infinite;
+}
+
+.tag-four {
+  bottom: 8%;
+  right: -6%;
+  animation: floatTagB 4.5s ease-in-out infinite;
+}
+
+@keyframes floatTagA {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes floatTagB {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(12px); }
+}
+
+@media (max-width: 600px) {
+  .tag-three { left: -2%; }
+  .tag-four { right: -2%; }
+}
