@@ -665,3 +665,67 @@ body.is-loading {
   z-index: 10;
   animation: floatTagB 4.5s ease-in-out infinite;
 }
+
+/* ===== FLOATING TAGS: FINAL (সবার শেষে রাখুন) ===== */
+.hero-visual .floating-tag {
+  position: absolute;
+  transform: none;
+  z-index: 10;
+  white-space: nowrap;
+}
+
+/* বাম পাশ, উপরের লাইন: SOFTWARE ENGINEER */
+.hero-visual .floating-tag.tag-two {
+  top: 25%;
+  bottom: auto;
+  left: -6%;
+  right: auto;
+  animation: tagFloatUp 4s ease-in-out infinite;
+}
+
+/* ডান পাশ, উপরের লাইন: DATA ANALYST (Software Engineer এর বরাবর) */
+.hero-visual .floating-tag.tag-three {
+  top: 25%;
+  bottom: auto;
+  left: auto;
+  right: -6%;
+  animation: tagFloatUp 4s ease-in-out infinite;
+}
+
+/* ডান পাশ, নিচের লাইন: WEB DEVELOPER */
+.hero-visual .floating-tag.tag-one {
+  top: auto;
+  bottom: 22%;
+  left: auto;
+  right: -6%;
+  animation: tagFloatDown 4.5s ease-in-out infinite;
+}
+
+/* বাম পাশ, নিচের লাইন: AI ENGINEER (Web Developer এর বরাবর) */
+.hero-visual .floating-tag.tag-four {
+  top: auto;
+  bottom: 22%;
+  left: -6%;
+  right: auto;
+  animation: tagFloatDown 4.5s ease-in-out infinite;
+}
+
+@keyframes tagFloatUp {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes tagFloatDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(12px); }
+}
+
+@media (max-width: 600px) {
+  .hero-visual .floating-tag.tag-two,
+  .hero-visual .floating-tag.tag-four { left: 0; }
+
+  .hero-visual .floating-tag.tag-three,
+  .hero-visual .floating-tag.tag-one { right: 0; }
+
+  .hero-visual .floating-tag { font-size: 0.65rem; }
+}
