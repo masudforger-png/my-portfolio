@@ -729,3 +729,47 @@ body.is-loading {
 
   .hero-visual .floating-tag { font-size: 0.65rem; }
 }
+
+/* ===== SOCIAL LINKS ===== */
+.social-links {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.social-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #00f0ff;
+  border-radius: 12px;
+  background: rgba(0, 240, 255, 0.06);
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.social-icon svg {
+  width: 22px;
+  height: 22px;
+  fill: #00f0ff;
+  transition: fill 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-5px);
+  background: #00f0ff;
+  box-shadow: 0 0 22px #00f0ff;
+}
+
+.social-icon:hover svg {
+  fill: #050510;
+}
+
+.social-icon.hidden {
+  display: none;
+}
