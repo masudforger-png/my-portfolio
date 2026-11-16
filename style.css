@@ -831,3 +831,23 @@ body.is-loading {
 @keyframes glowSpin {
   to { transform: rotate(360deg); }
 }
+
+
+/* ===== LANGUAGE TAGS ===== */
+.lang-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.lang-tags span {
+  padding: 6px 14px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  color: #00f0ff;
+  border: 1px solid rgba(0, 240, 255, 0.5);
+  border-radius: 20px;
+  background: rgba(0, 240, 255, 0.05);
+}
